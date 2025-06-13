@@ -799,6 +799,11 @@ plot_parameter(data_gen_di['Polarizance'], title=r'Polarizance ($\mathcal{P}$)',
 plot_parameter(data_gen_di['Pdelta'], title=r'Polarimetric Purity ($P_\Delta$)',  x=x, y=y,xtitle=xtitle, ytitle=ytitle,  num=1,  rot=True, name= filename +'_Pdelta' if save is True else None)
 plot_parameter(data_gen_di['Ps'], title=r'Spherical Purity ($P_S$)',  x=x, y=y, xtitle=xtitle, ytitle=ytitle, num=1, rot=True, name= filename +'_Ps' if save is True else None)
 
+#%%%% Save data
+
+# np.save("Data/"+filename, data_chd_di['IPPS'])
+# np.save("Data/DNorm_PyM", x)
+# np.save("Data/DNorm_sigmaTheta", y)
 
 #%%%% Iteration
 
@@ -837,6 +842,8 @@ for ip in ps.keys():
 
 
 
+            
+
 #%% Retarders
 
 filename="R_p0"
@@ -873,7 +880,11 @@ plot_parameter(data_gen_re['Retardance'], title=r'Retardance ($\Delta$)', x=x, y
 plot_parameter(data_gen_re['Pdelta'], title=r'Polarimetric Purity ($P_\Delta$)',  x=x, y=y, xtitle=xtitle, ytitle=ytitle, num=1,  rot=True, name= filename +'_Pdelta' if save is True else None)
 plot_parameter(data_gen_re['Ps'], title=r'Spherical Purity ($P_S$)',  x=x, y=y, xtitle=xtitle, ytitle=ytitle, num=1, rot=True, name= filename +'_Ps' if save is True else None)
 
+#%%%% Save data
 
+# np.save("Data/"+filename, data_chd_re['IPPS'])
+# np.save("Data/Re_Phi", x)
+# np.save("Data/Re_sigmaTheta", y)
 #%%%% Iteration
 
 ps={'0':0, '30':0.3}
@@ -943,6 +954,11 @@ plot_parameter(data_gen_di['Pdelta'], title=r'Polarimetric Purity ($P_\Delta$)',
 plot_parameter(data_gen_di['Ps'], title=r'Spherical Purity ($P_S$)',  x=x, y=y, xtitle=xtitle, ytitle=ytitle, num=1, name= filename +'_Ps' if save is True else None)
 
 
+#%%%% Save data
+
+# np.save("Data/"+filename, data_chd_dr['IPPS'])
+# np.save("Data/Inc_PyM", pyM)
+# np.save("Data/Inc_Phi", Phi)
              
 #%%% Iteration
 
